@@ -1,5 +1,5 @@
-Dash Labs Application
-=====================
+Jobs at Dash Labs
+=================
 
 There's nothing here right now.  You should change that.  Fork this repository and do something which demonstrates your ability to perform the job to which you are applying.  Be succinct and have fun with it.  A large part of designing applications and programming computers is creativity.
 
