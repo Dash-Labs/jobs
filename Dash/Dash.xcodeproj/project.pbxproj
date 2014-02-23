@@ -58,6 +58,7 @@
 		DF99476718BA82A9008204BB /* DashSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashSpec.m; sourceTree = "<group>"; };
 		DF99476918BA833D008204BB /* TrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendsViewController.h; sourceTree = "<group>"; };
 		DF99476A18BA833D008204BB /* TrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendsViewController.m; sourceTree = "<group>"; };
+		DF99476D18BA8612008204BB /* ColorConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +124,7 @@
 				DF99474118BA8207008204BB /* Main_iPhone.storyboard */,
 				DF99476918BA833D008204BB /* TrendsViewController.h */,
 				DF99476A18BA833D008204BB /* TrendsViewController.m */,
+				DF99476D18BA8612008204BB /* ColorConstants.h */,
 				DF99474A18BA8207008204BB /* Images.xcassets */,
 				DF99473618BA8207008204BB /* Supporting Files */,
 			);

@@ -19,6 +19,10 @@ describe(@"TrendsViewController", ^{
     it(@"should exist", ^{
         expect(_tvc).toNot.beNil();
     });
+    
+    it(@"should have a navigation bar", ^{
+        expect(_tvc.navigationController.navigationBar).toNot.beNil();
+    });
 });
 
 SpecEnd
