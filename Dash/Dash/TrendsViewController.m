@@ -11,6 +11,7 @@
 
 @interface TrendsViewController ()
 
+
 @end
 
 @implementation TrendsViewController
@@ -23,14 +24,6 @@
     NSLog(@"delcared nav bar color: %@", NAVIGATION_BAR_COLOR);
 }
 
--(void)viewWillAppear:(BOOL)animated{
-    NSLog(@"%@", self.navigationController.navigationBar.backgroundColor);
-}
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end

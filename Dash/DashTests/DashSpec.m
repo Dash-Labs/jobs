@@ -4,6 +4,9 @@
 #import <OCMockito/OCMockito.h>
 #import "TrendsViewController.h"
 #import "ColorConstants.h"
+#import "GraphContainerView.h"
+#import "TotalsView.h"
+
 
 SpecBegin(TrendsViewController)
 
@@ -24,6 +27,11 @@ describe(@"TrendsViewController", ^{
     it(@"should have a blue navigation bar", ^{
         expect(_tvc.navigationController.navigationBar).toNot.beNil();
         expect(_tvc.navigationController.navigationBar.barTintColor).to.equal(NAVIGATION_BAR_COLOR);
+    });
+    
+    it(@"should have a graphcontainerview with a JBBarChartView as a subview", ^{
+        expect(_tvc.graphView).toNot.beNil();
+        expect([_tvc.graphView.subviews[0] class]).to.equal([JBBarChartView class]);
     });
     
 });

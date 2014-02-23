@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GraphContainerView.h"
+#import "TotalsView.h"
 
 @interface TrendsViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet TotalsView *totalsView;
+@property (weak, nonatomic) IBOutlet GraphContainerView *graphView;
 @end

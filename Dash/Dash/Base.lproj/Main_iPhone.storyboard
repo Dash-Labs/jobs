@@ -15,10 +15,106 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QVT-zY-uDM" customClass="TrendBarView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdw-CR-r14">
+                                        <rect key="frame" x="20" y="10" width="64" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Score">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="peM-jy-fm6">
+                                        <rect key="frame" x="92" y="10" width="65" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="MPG">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUA-Ek-qou">
+                                        <rect key="frame" x="157" y="10" width="65" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Fuel">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rH2-RA-j8Y">
+                                        <rect key="frame" x="232" y="10" width="64" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Distance">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95686280727386475" green="0.95686280727386475" blue="0.95686280727386475" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstItem="bdw-CR-r14" firstAttribute="width" secondItem="peM-jy-fm6" secondAttribute="width" id="Ej5-nT-Jkx"/>
+                                    <constraint firstAttribute="centerY" secondItem="bdw-CR-r14" secondAttribute="centerY" id="Ibm-Vl-JmL"/>
+                                    <constraint firstAttribute="trailing" secondItem="rH2-RA-j8Y" secondAttribute="trailing" constant="20" id="MjS-zN-Lvr"/>
+                                    <constraint firstItem="bdw-CR-r14" firstAttribute="centerY" secondItem="peM-jy-fm6" secondAttribute="centerY" id="Nnt-op-L3Z"/>
+                                    <constraint firstAttribute="centerY" secondItem="bdw-CR-r14" secondAttribute="centerY" id="O3B-F1-GHR"/>
+                                    <constraint firstItem="rH2-RA-j8Y" firstAttribute="leading" secondItem="KUA-Ek-qou" secondAttribute="trailing" constant="-2" id="TAj-xK-NIf"/>
+                                    <constraint firstItem="peM-jy-fm6" firstAttribute="leading" secondItem="bdw-CR-r14" secondAttribute="trailing" constant="21" id="WdV-dy-P67"/>
+                                    <constraint firstAttribute="height" constant="50" id="XD5-jl-Cn6"/>
+                                    <constraint firstItem="bdw-CR-r14" firstAttribute="centerY" secondItem="rH2-RA-j8Y" secondAttribute="centerY" id="ZPG-Em-XXR"/>
+                                    <constraint firstItem="bdw-CR-r14" firstAttribute="centerY" secondItem="KUA-Ek-qou" secondAttribute="centerY" id="qfc-fJ-hac"/>
+                                    <constraint firstItem="bdw-CR-r14" firstAttribute="width" secondItem="rH2-RA-j8Y" secondAttribute="width" id="t3z-Dh-1Am"/>
+                                    <constraint firstItem="KUA-Ek-qou" firstAttribute="leading" secondItem="peM-jy-fm6" secondAttribute="trailing" constant="2" id="wmC-TI-Y5n"/>
+                                    <constraint firstItem="bdw-CR-r14" firstAttribute="width" secondItem="KUA-Ek-qou" secondAttribute="width" id="wse-Wi-IQf"/>
+                                    <constraint firstItem="bdw-CR-r14" firstAttribute="leading" secondItem="QVT-zY-uDM" secondAttribute="leading" constant="20" id="xGF-T2-ody"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C1t-Q4-eM7" customClass="TimeBarView">
+                                <rect key="frame" x="0.0" y="250" width="324" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.95686280729999995" green="0.95686280729999995" blue="0.95686280729999995" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="VTO-GJ-avv"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0XQ-df-jao" customClass="TotalsView">
+                                <rect key="frame" x="0.0" y="50" width="320" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Koq-Wa-YJI"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Szg-uh-tOx" customClass="GraphContainerView">
+                                <rect key="frame" x="0.0" y="300" width="320" height="204"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rNS-FT-gmR" firstAttribute="top" secondItem="Szg-uh-tOx" secondAttribute="bottom" id="0bR-HR-6Dh"/>
+                            <constraint firstItem="QVT-zY-uDM" firstAttribute="top" secondItem="wxS-Kf-MiQ" secondAttribute="bottom" id="3ZE-tI-LiK"/>
+                            <constraint firstAttribute="trailing" secondItem="C1t-Q4-eM7" secondAttribute="trailing" id="5VL-KY-Ftc"/>
+                            <constraint firstItem="0XQ-df-jao" firstAttribute="top" secondItem="QVT-zY-uDM" secondAttribute="bottom" id="Abb-9E-pkn"/>
+                            <constraint firstItem="Szg-uh-tOx" firstAttribute="top" secondItem="C1t-Q4-eM7" secondAttribute="bottom" id="EqW-y1-2HY"/>
+                            <constraint firstAttribute="trailing" secondItem="0XQ-df-jao" secondAttribute="trailing" id="GqJ-xG-96B"/>
+                            <constraint firstItem="QVT-zY-uDM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="IpC-y8-irX"/>
+                            <constraint firstItem="Szg-uh-tOx" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="KCn-IJ-DCq"/>
+                            <constraint firstAttribute="trailing" secondItem="QVT-zY-uDM" secondAttribute="trailing" id="Ugt-Hn-vQZ"/>
+                            <constraint firstItem="C1t-Q4-eM7" firstAttribute="top" secondItem="0XQ-df-jao" secondAttribute="bottom" id="VP7-g6-Ouu"/>
+                            <constraint firstItem="0XQ-df-jao" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Ypv-Yp-AVP"/>
+                            <constraint firstItem="C1t-Q4-eM7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="nkM-Uf-lqB"/>
+                            <constraint firstAttribute="trailing" secondItem="Szg-uh-tOx" secondAttribute="trailing" id="oWi-9X-Amg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1jp-Gp-sdC"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="graphView" destination="Szg-uh-tOx" id="z3l-7q-Fr4"/>
+                        <outlet property="totalsView" destination="0XQ-df-jao" id="Mwg-Mo-cfQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
