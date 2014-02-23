@@ -3,6 +3,7 @@
 #import <Expecta/Expecta.h>
 #import <OCMockito/OCMockito.h>
 #import "TrendsViewController.h"
+#import "ColorConstants.h"
 
 SpecBegin(TrendsViewController)
 
@@ -20,9 +21,11 @@ describe(@"TrendsViewController", ^{
         expect(_tvc).toNot.beNil();
     });
     
-    it(@"should have a navigation bar", ^{
+    it(@"should have a blue navigation bar", ^{
         expect(_tvc.navigationController.navigationBar).toNot.beNil();
+        expect(_tvc.navigationController.navigationBar.barTintColor).to.equal(NAVIGATION_BAR_COLOR);
     });
+    
 });
 
 SpecEnd

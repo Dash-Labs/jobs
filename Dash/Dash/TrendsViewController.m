@@ -18,7 +18,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.navigationController.navigationBar setBackgroundColor:NAVIGATION_BAR_COLOR];
+    [self.navigationController.navigationBar setTranslucent:NO];
+    [self.navigationController.navigationBar setBarTintColor:NAVIGATION_BAR_COLOR];
+    NSLog(@"delcared nav bar color: %@", NAVIGATION_BAR_COLOR);
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    NSLog(@"%@", self.navigationController.navigationBar.backgroundColor);
 }
 
 - (void)didReceiveMemoryWarning
