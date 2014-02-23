@@ -1,30 +1,22 @@
 //
-//  TrendBarView.m
+//  DashButton.m
 //  Dash
 //
 //  Created by Blagdon Jeffrey on 2/23/14.
 //  Copyright (c) 2014 Jeffrey Blagdon. All rights reserved.
 //
 
-#import "TrendBarView.h"
+#import "DashButton.h"
 
-@implementation TrendBarView
+@implementation DashButton
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self setup];
+        // Initialization code
     }
     return self;
-}
-
--(void)awakeFromNib{
-    [self setup];
-}
-
--(void)setup{
-    [self setBackgroundColor:BUTTON_BAR_COLOR];
 }
 
 /*

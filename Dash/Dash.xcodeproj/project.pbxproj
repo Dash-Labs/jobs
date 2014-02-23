@@ -28,6 +28,7 @@
 		DF99477B18BA917E008204BB /* TimeBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF99477A18BA917E008204BB /* TimeBarView.m */; };
 		DF99477E18BA9579008204BB /* TotalsView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF99477D18BA9579008204BB /* TotalsView.m */; };
 		DF99478118BA95A3008204BB /* GraphContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF99478018BA95A3008204BB /* GraphContainerView.m */; };
+		DF99478418BAA078008204BB /* DashButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DF99478318BAA078008204BB /* DashButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		DF99477D18BA9579008204BB /* TotalsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalsView.m; sourceTree = "<group>"; };
 		DF99477F18BA95A3008204BB /* GraphContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphContainerView.h; sourceTree = "<group>"; };
 		DF99478018BA95A3008204BB /* GraphContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphContainerView.m; sourceTree = "<group>"; };
+		DF99478218BAA078008204BB /* DashButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashButton.h; sourceTree = "<group>"; };
+		DF99478318BAA078008204BB /* DashButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				DF99474118BA8207008204BB /* Main_iPhone.storyboard */,
+				DF99478218BAA078008204BB /* DashButton.h */,
+				DF99478318BAA078008204BB /* DashButton.m */,
 				DF99476918BA833D008204BB /* TrendsViewController.h */,
 				DF99476A18BA833D008204BB /* TrendsViewController.m */,
 				DF99477318BA9055008204BB /* ButtonBarView.h */,
@@ -329,6 +334,7 @@
 				DF99477E18BA9579008204BB /* TotalsView.m in Sources */,
 				DF99473C18BA8207008204BB /* main.m in Sources */,
 				DF99478118BA95A3008204BB /* GraphContainerView.m in Sources */,
+				DF99478418BAA078008204BB /* DashButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

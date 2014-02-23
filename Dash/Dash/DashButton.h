@@ -1,5 +1,5 @@
 //
-//  ButtonBarView.h
+//  DashButton.h
 //  Dash
 //
 //  Created by Blagdon Jeffrey on 2/23/14.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ColorConstants.h"
 
-@interface ButtonBarView : UIView
+@interface DashButton : UIButton
 
 @end

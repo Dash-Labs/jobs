@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Jeffrey Blagdon. All rights reserved.
 //
 
+
 #import "ButtonBarView.h"
 
 @interface TrendBarView : ButtonBarView
