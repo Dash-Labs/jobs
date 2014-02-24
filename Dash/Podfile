@@ -1,0 +1,5 @@
+platform :ios, '7.0'
+pod 'JBChartView'
+pod 'OCMockito'
+pod 'Specta'
+pod 'Expecta'
