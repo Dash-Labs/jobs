@@ -8,7 +8,13 @@
 
 typedef NS_ENUM(NSInteger, DataType) {
     DataTypeScore,
-    DataTypeMPG,
+    DataTypeEfficiency,
     DataTypeFuel,
     DataTypeDistance
+};
+
+typedef NS_ENUM(NSInteger, TimeDenomination) {
+    TimeDenominationWeek,
+    TimeDenominationMonth,
+    TimeDenominationYear
 };

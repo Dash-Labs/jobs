@@ -24,8 +24,6 @@
 		DF99476818BA82A9008204BB /* DashSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = DF99476718BA82A9008204BB /* DashSpec.m */; };
 		DF99476B18BA833D008204BB /* TrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF99476A18BA833D008204BB /* TrendsViewController.m */; };
 		DF99477518BA9055008204BB /* ButtonBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF99477418BA9055008204BB /* ButtonBarView.m */; };
-		DF99477818BA9165008204BB /* TrendBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF99477718BA9165008204BB /* TrendBarView.m */; };
-		DF99477B18BA917E008204BB /* TimeBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF99477A18BA917E008204BB /* TimeBarView.m */; };
 		DF99477E18BA9579008204BB /* TotalsView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF99477D18BA9579008204BB /* TotalsView.m */; };
 		DF99478118BA95A3008204BB /* GraphContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF99478018BA95A3008204BB /* GraphContainerView.m */; };
 		DF99478718BAA261008204BB /* TrendsNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF99478618BAA261008204BB /* TrendsNavBarView.m */; };
@@ -67,10 +65,6 @@
 		DF99476D18BA8612008204BB /* ColorConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorConstants.h; sourceTree = "<group>"; };
 		DF99477318BA9055008204BB /* ButtonBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonBarView.h; sourceTree = "<group>"; };
 		DF99477418BA9055008204BB /* ButtonBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonBarView.m; sourceTree = "<group>"; };
-		DF99477618BA9165008204BB /* TrendBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendBarView.h; sourceTree = "<group>"; };
-		DF99477718BA9165008204BB /* TrendBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendBarView.m; sourceTree = "<group>"; };
-		DF99477918BA917E008204BB /* TimeBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeBarView.h; sourceTree = "<group>"; };
-		DF99477A18BA917E008204BB /* TimeBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeBarView.m; sourceTree = "<group>"; };
 		DF99477C18BA9579008204BB /* TotalsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalsView.h; sourceTree = "<group>"; };
 		DF99477D18BA9579008204BB /* TotalsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalsView.m; sourceTree = "<group>"; };
 		DF99477F18BA95A3008204BB /* GraphContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphContainerView.h; sourceTree = "<group>"; };
@@ -149,10 +143,6 @@
 				DF99478618BAA261008204BB /* TrendsNavBarView.m */,
 				DF99477318BA9055008204BB /* ButtonBarView.h */,
 				DF99477418BA9055008204BB /* ButtonBarView.m */,
-				DF99477618BA9165008204BB /* TrendBarView.h */,
-				DF99477718BA9165008204BB /* TrendBarView.m */,
-				DF99477918BA917E008204BB /* TimeBarView.h */,
-				DF99477A18BA917E008204BB /* TimeBarView.m */,
 				DF99477C18BA9579008204BB /* TotalsView.h */,
 				DF99477D18BA9579008204BB /* TotalsView.m */,
 				DF99477F18BA95A3008204BB /* GraphContainerView.h */,
@@ -342,8 +332,6 @@
 			files = (
 				DF99476B18BA833D008204BB /* TrendsViewController.m in Sources */,
 				DF99474018BA8207008204BB /* AppDelegate.m in Sources */,
-				DF99477818BA9165008204BB /* TrendBarView.m in Sources */,
-				DF99477B18BA917E008204BB /* TimeBarView.m in Sources */,
 				DF99477518BA9055008204BB /* ButtonBarView.m in Sources */,
 				DF99477E18BA9579008204BB /* TotalsView.m in Sources */,
 				DF99478718BAA261008204BB /* TrendsNavBarView.m in Sources */,

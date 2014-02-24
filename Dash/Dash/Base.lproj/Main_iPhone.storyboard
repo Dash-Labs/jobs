@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QVT-zY-uDM" customClass="TrendBarView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QVT-zY-uDM" customClass="ButtonBarView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
@@ -42,8 +42,8 @@
                                     <constraint firstItem="s7w-jx-GQO" firstAttribute="leading" secondItem="QVT-zY-uDM" secondAttribute="leading" id="tJe-4O-dw5"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1t-Q4-eM7" customClass="TimeBarView">
-                                <rect key="frame" x="0.0" y="210" width="324" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1t-Q4-eM7" customClass="ButtonBarView">
+                                <rect key="frame" x="0.0" y="250" width="324" height="50"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="f7z-qo-BUv">
@@ -67,7 +67,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0XQ-df-jao" customClass="TotalsView">
-                                <rect key="frame" x="0.0" y="50" width="324" height="160"/>
+                                <rect key="frame" x="0.0" y="70" width="320" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
@@ -75,7 +75,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Szg-uh-tOx" customClass="GraphContainerView">
-                                <rect key="frame" x="0.0" y="261" width="320" height="243"/>
+                                <rect key="frame" x="0.0" y="301" width="320" height="203"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
@@ -90,11 +90,11 @@
                             <constraint firstItem="Szg-uh-tOx" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="KCn-IJ-DCq"/>
                             <constraint firstItem="QVT-zY-uDM" firstAttribute="top" secondItem="wxS-Kf-MiQ" secondAttribute="bottom" id="U0f-JD-KjN"/>
                             <constraint firstItem="QVT-zY-uDM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="eDR-kw-eKp"/>
-                            <constraint firstAttribute="trailing" secondItem="0XQ-df-jao" secondAttribute="trailing" constant="-4" id="jlf-b7-mhi"/>
-                            <constraint firstItem="C1t-Q4-eM7" firstAttribute="top" secondItem="0XQ-df-jao" secondAttribute="bottom" id="kAy-eu-Wb2"/>
+                            <constraint firstAttribute="trailing" secondItem="0XQ-df-jao" secondAttribute="trailing" id="jlf-b7-mhi"/>
+                            <constraint firstItem="C1t-Q4-eM7" firstAttribute="top" secondItem="0XQ-df-jao" secondAttribute="bottom" constant="20" id="kAy-eu-Wb2"/>
                             <constraint firstAttribute="trailing" secondItem="Szg-uh-tOx" secondAttribute="trailing" id="oWi-9X-Amg"/>
                             <constraint firstItem="0XQ-df-jao" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="pjv-X4-amG"/>
-                            <constraint firstItem="0XQ-df-jao" firstAttribute="top" secondItem="QVT-zY-uDM" secondAttribute="bottom" id="t3n-uO-5Iu"/>
+                            <constraint firstItem="0XQ-df-jao" firstAttribute="top" secondItem="QVT-zY-uDM" secondAttribute="bottom" constant="20" id="t3n-uO-5Iu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1jp-Gp-sdC"/>

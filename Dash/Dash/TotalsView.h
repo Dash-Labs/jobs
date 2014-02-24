@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TotalsView : UIView
-@property (nonatomic) NSInteger totalsDataType;
+@property (nonatomic) NSInteger totalDataType;
+@property (nonatomic) NSInteger timeDenomination;
 @end

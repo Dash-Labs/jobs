@@ -14,16 +14,16 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self setupSubviews];
+        [self setup];
     }
     return self;
 }
 
 -(void)awakeFromNib{
-    [self setupSubviews];
+    [self setup];
 }
 
--(void)setupSubviews{
+-(void)setup{
     [self addSubview:self.barChartView];
     self.barChartView.dataSource = self.dataSource;
     self.barChartView.delegate = self.delegate;
