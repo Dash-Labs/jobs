@@ -39,6 +39,10 @@
     [self addSubview:self.digitLabel];
 }
 
+-(void)viewDidLayoutSubviews{
+    [self drawDivider];
+}
+
 -(NSString *)imageNameForDataType:(NSInteger)dataType{
     // TODO -- Add other images
     switch (dataType) {
@@ -97,6 +101,15 @@
 
 -(void)updateIconImage{
     self.iconView.image = [UIImage imageNamed:[self imageNameForDataType:self.totalDataType]];
+}
+
+-(void)drawDivider{
+    NSLog(@"inside dd");
+    UIBezierPath *path = [[UIBezierPath alloc]init];
+    [path moveToPoint:CGPointMake(self.frame.size.width * TOTALS_VIEW_DIVIDER_RATIO, 0)];
+    [path addLineToPoint:CGPointMake(self.frame.size.width * TOTALS_VIEW_DIVIDER_RATIO, self.frame.size.height)];
+    [BODY_TEXT_COLOR setStroke];
+    [path stroke];
 }
 
 -(UIImageView *)iconView{
