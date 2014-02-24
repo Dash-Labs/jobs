@@ -7,6 +7,7 @@
 //
 
 #import "TotalsView.h"
+#import "Typedefs.h"
 
 @implementation TotalsView
 
@@ -14,18 +15,43 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        [self setup];
     }
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
+-(void)awakeFromNib{
+    [self setup];
 }
-*/
+
+-(void)setup{
+    NSString *iconImageName = [self imageNameForDataType:self.totalsDataType];
+    UIImage *iconImage = [UIImage imageNamed:iconImageName];
+    UIImageView *iconView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, iconImage.size.width, iconImage.size.height)];
+    iconView.image = iconImage;
+    [self addSubview:iconView];
+}
+
+-(NSString *)imageNameForDataType:(NSInteger)dataType{
+    // TODO -- Add other images
+    switch (dataType) {
+        case DataTypeScore:
+            return @"GasCan";
+            break;
+        case DataTypeDistance:
+            return @"GasCan";
+            break;
+        case DataTypeMPG:
+            return @"GasCan";
+            break;
+        case DataTypeFuel:
+            return @"GasCan";
+            break;
+        default:
+            break;
+    }
+    return nil;
+}
+
 
 @end

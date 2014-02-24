@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface TotalsView : UIView
-
+@property (nonatomic) NSInteger totalsDataType;
 @end

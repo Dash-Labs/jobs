@@ -33,6 +33,9 @@ describe(@"TrendsViewController", ^{
         expect(_tvc.graphView).toNot.beNil();
         expect([_tvc.graphView.subviews[0] class]).to.equal([JBBarChartView class]);
     });
+//    it(@"should have a navigationitem titleview", ^{
+//       expect(_tvc.navigationController.navig)
+//    });
     
 });
 

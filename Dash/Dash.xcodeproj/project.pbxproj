@@ -28,7 +28,7 @@
 		DF99477B18BA917E008204BB /* TimeBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF99477A18BA917E008204BB /* TimeBarView.m */; };
 		DF99477E18BA9579008204BB /* TotalsView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF99477D18BA9579008204BB /* TotalsView.m */; };
 		DF99478118BA95A3008204BB /* GraphContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF99478018BA95A3008204BB /* GraphContainerView.m */; };
-		DF99478418BAA078008204BB /* DashButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DF99478318BAA078008204BB /* DashButton.m */; };
+		DF99478718BAA261008204BB /* TrendsNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF99478618BAA261008204BB /* TrendsNavBarView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,8 +75,11 @@
 		DF99477D18BA9579008204BB /* TotalsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalsView.m; sourceTree = "<group>"; };
 		DF99477F18BA95A3008204BB /* GraphContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphContainerView.h; sourceTree = "<group>"; };
 		DF99478018BA95A3008204BB /* GraphContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphContainerView.m; sourceTree = "<group>"; };
-		DF99478218BAA078008204BB /* DashButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashButton.h; sourceTree = "<group>"; };
-		DF99478318BAA078008204BB /* DashButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashButton.m; sourceTree = "<group>"; };
+		DF99478518BAA261008204BB /* TrendsNavBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendsNavBarView.h; sourceTree = "<group>"; };
+		DF99478618BAA261008204BB /* TrendsNavBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendsNavBarView.m; sourceTree = "<group>"; };
+		DF99478818BAA2CB008204BB /* GeometryConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeometryConstants.h; sourceTree = "<group>"; };
+		DF99478F18BAC521008204BB /* FontConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontConstants.h; sourceTree = "<group>"; };
+		DF99479518BACFA4008204BB /* Typedefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Typedefs.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,10 +143,10 @@
 			isa = PBXGroup;
 			children = (
 				DF99474118BA8207008204BB /* Main_iPhone.storyboard */,
-				DF99478218BAA078008204BB /* DashButton.h */,
-				DF99478318BAA078008204BB /* DashButton.m */,
 				DF99476918BA833D008204BB /* TrendsViewController.h */,
 				DF99476A18BA833D008204BB /* TrendsViewController.m */,
+				DF99478518BAA261008204BB /* TrendsNavBarView.h */,
+				DF99478618BAA261008204BB /* TrendsNavBarView.m */,
 				DF99477318BA9055008204BB /* ButtonBarView.h */,
 				DF99477418BA9055008204BB /* ButtonBarView.m */,
 				DF99477618BA9165008204BB /* TrendBarView.h */,
@@ -154,7 +157,7 @@
 				DF99477D18BA9579008204BB /* TotalsView.m */,
 				DF99477F18BA95A3008204BB /* GraphContainerView.h */,
 				DF99478018BA95A3008204BB /* GraphContainerView.m */,
-				DF99476D18BA8612008204BB /* ColorConstants.h */,
+				DF99478B18BAA370008204BB /* Constants */,
 				DF99474A18BA8207008204BB /* Images.xcassets */,
 				DF99473618BA8207008204BB /* Supporting Files */,
 			);
@@ -191,6 +194,17 @@
 				DF99475A18BA8207008204BB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DF99478B18BAA370008204BB /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				DF99476D18BA8612008204BB /* ColorConstants.h */,
+				DF99478818BAA2CB008204BB /* GeometryConstants.h */,
+				DF99478F18BAC521008204BB /* FontConstants.h */,
+				DF99479518BACFA4008204BB /* Typedefs.h */,
+			);
+			name = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,9 +346,9 @@
 				DF99477B18BA917E008204BB /* TimeBarView.m in Sources */,
 				DF99477518BA9055008204BB /* ButtonBarView.m in Sources */,
 				DF99477E18BA9579008204BB /* TotalsView.m in Sources */,
+				DF99478718BAA261008204BB /* TrendsNavBarView.m in Sources */,
 				DF99473C18BA8207008204BB /* main.m in Sources */,
 				DF99478118BA95A3008204BB /* GraphContainerView.m in Sources */,
-				DF99478418BAA078008204BB /* DashButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

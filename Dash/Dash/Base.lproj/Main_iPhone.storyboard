@@ -20,58 +20,50 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdw-CR-r14" customClass="DashButton">
-                                        <rect key="frame" x="20" y="10" width="64" height="30"/>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="s7w-jx-GQO">
+                                        <rect key="frame" x="0.0" y="11" width="320" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Score">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="peM-jy-fm6" customClass="DashButton">
-                                        <rect key="frame" x="92" y="10" width="65" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="MPG">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUA-Ek-qou" customClass="DashButton">
-                                        <rect key="frame" x="157" y="10" width="65" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="Fuel">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rH2-RA-j8Y" customClass="DashButton">
-                                        <rect key="frame" x="232" y="10" width="64" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="Distance">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
+                                        <segments>
+                                            <segment title="Score"/>
+                                            <segment title="MPG"/>
+                                            <segment title="Fuel"/>
+                                            <segment title="Distance"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="trendControlChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Tof-bd-MGX"/>
+                                        </connections>
+                                    </segmentedControl>
                                 </subviews>
-                                <color key="backgroundColor" red="0.95686280727386475" green="0.95686280727386475" blue="0.95686280727386475" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
-                                    <constraint firstItem="bdw-CR-r14" firstAttribute="width" secondItem="peM-jy-fm6" secondAttribute="width" id="Ej5-nT-Jkx"/>
-                                    <constraint firstItem="bdw-CR-r14" firstAttribute="centerY" secondItem="peM-jy-fm6" secondAttribute="centerY" id="Nnt-op-L3Z"/>
-                                    <constraint firstItem="rH2-RA-j8Y" firstAttribute="leading" secondItem="KUA-Ek-qou" secondAttribute="trailing" constant="-2" id="TAj-xK-NIf"/>
-                                    <constraint firstItem="peM-jy-fm6" firstAttribute="leading" secondItem="bdw-CR-r14" secondAttribute="trailing" constant="21" id="WdV-dy-P67"/>
+                                    <constraint firstItem="s7w-jx-GQO" firstAttribute="centerY" secondItem="QVT-zY-uDM" secondAttribute="centerY" id="Exe-5f-7F4"/>
+                                    <constraint firstAttribute="trailing" secondItem="s7w-jx-GQO" secondAttribute="trailing" id="Iup-Sc-8IW"/>
                                     <constraint firstAttribute="height" constant="50" id="XD5-jl-Cn6"/>
-                                    <constraint firstItem="bdw-CR-r14" firstAttribute="centerY" secondItem="rH2-RA-j8Y" secondAttribute="centerY" id="ZPG-Em-XXR"/>
-                                    <constraint firstItem="bdw-CR-r14" firstAttribute="centerY" secondItem="KUA-Ek-qou" secondAttribute="centerY" id="qfc-fJ-hac"/>
-                                    <constraint firstItem="bdw-CR-r14" firstAttribute="width" secondItem="rH2-RA-j8Y" secondAttribute="width" id="t3z-Dh-1Am"/>
-                                    <constraint firstItem="KUA-Ek-qou" firstAttribute="leading" secondItem="peM-jy-fm6" secondAttribute="trailing" constant="2" id="wmC-TI-Y5n"/>
-                                    <constraint firstItem="bdw-CR-r14" firstAttribute="width" secondItem="KUA-Ek-qou" secondAttribute="width" id="wse-Wi-IQf"/>
+                                    <constraint firstAttribute="centerX" secondItem="s7w-jx-GQO" secondAttribute="centerX" id="aGl-mo-yCT"/>
+                                    <constraint firstItem="s7w-jx-GQO" firstAttribute="leading" secondItem="QVT-zY-uDM" secondAttribute="leading" id="tJe-4O-dw5"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1t-Q4-eM7" customClass="TimeBarView">
                                 <rect key="frame" x="0.0" y="210" width="324" height="50"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.95686280729999995" green="0.95686280729999995" blue="0.95686280729999995" alpha="1" colorSpace="deviceRGB"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="f7z-qo-BUv">
+                                        <rect key="frame" x="0.0" y="11" width="324" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <segments>
+                                            <segment title="Week"/>
+                                            <segment title="Month"/>
+                                            <segment title="Year"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="timeControlChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Q1L-qH-MqJ"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
                                 <constraints>
+                                    <constraint firstItem="f7z-qo-BUv" firstAttribute="centerY" secondItem="C1t-Q4-eM7" secondAttribute="centerY" id="bjd-nz-aXv"/>
                                     <constraint firstAttribute="height" constant="50" id="d7B-G2-gbN"/>
+                                    <constraint firstItem="f7z-qo-BUv" firstAttribute="leading" secondItem="C1t-Q4-eM7" secondAttribute="leading" id="iPr-ig-e8F"/>
+                                    <constraint firstAttribute="trailing" secondItem="f7z-qo-BUv" secondAttribute="trailing" id="pMC-bq-Pfr"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0XQ-df-jao" customClass="TotalsView">
@@ -109,7 +101,9 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="graphView" destination="Szg-uh-tOx" id="z3l-7q-Fr4"/>
+                        <outlet property="timeControl" destination="f7z-qo-BUv" id="8Le-Pl-GI9"/>
                         <outlet property="totalsView" destination="0XQ-df-jao" id="Mwg-Mo-cfQ"/>
+                        <outlet property="trendControl" destination="s7w-jx-GQO" id="hAC-Ay-NRT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

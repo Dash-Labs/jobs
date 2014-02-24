@@ -7,11 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "ColorConstants.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    _window.tintColor = BODY_TEXT_COLOR;
     // Override point for customization after application launch.
     return YES;
 }

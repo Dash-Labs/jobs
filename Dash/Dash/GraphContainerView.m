@@ -25,10 +25,13 @@
 
 -(void)setupSubviews{
     [self addSubview:self.barChartView];
+    self.barChartView.dataSource = self.dataSource;
+    self.barChartView.delegate = self.delegate;
 }
 
 -(JBBarChartView *)barChartView{
     if (!_barChartView) {
+        // TODO -- add subviews for axes, reduce frame size to account
         _barChartView = [[JBBarChartView alloc]initWithFrame:self.frame];
     }
     return _barChartView;

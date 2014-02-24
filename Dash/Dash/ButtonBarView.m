@@ -14,9 +14,17 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        [self setup];
     }
     return self;
+}
+
+-(void)awakeFromNib{
+    [self setup];
+}
+
+-(void)setup{
+    [self setBackgroundColor:BUTTON_BAR_COLOR];
 }
 
 
