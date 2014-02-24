@@ -28,7 +28,7 @@
 -(void)setup{
     [self addSubview:self.barChartView];
     [self.barChartView setFrame:self.frame];
-    [self.barChartView setBounds:self.frame];
+    [self.barChartView setBounds:self.frame];  // Shouldn't need, but breaks otherwise
 }
 
 -(JBBarChartView *)barChartView{
@@ -45,6 +45,7 @@
 }
 
 -(CGRect)calculateGraphFrame{
+//    TODO -- getting inconsistent placement, better to use autolayout
     CGRect newFrame = self.frame;
     newFrame.origin.x += BAR_CHART_H_INSET;
     newFrame.size.width -= 2 * BAR_CHART_H_INSET;

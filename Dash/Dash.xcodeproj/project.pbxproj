@@ -27,6 +27,7 @@
 		DF99477E18BA9579008204BB /* TotalsView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF99477D18BA9579008204BB /* TotalsView.m */; };
 		DF99478118BA95A3008204BB /* GraphContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF99478018BA95A3008204BB /* GraphContainerView.m */; };
 		DF99478718BAA261008204BB /* TrendsNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF99478618BAA261008204BB /* TrendsNavBarView.m */; };
+		DF99479C18BB40B1008204BB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DF99479B18BB40B1008204BB /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		DF99478F18BAC521008204BB /* FontConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontConstants.h; sourceTree = "<group>"; };
 		DF99479518BACFA4008204BB /* Typedefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Typedefs.h; sourceTree = "<group>"; };
 		DF99479818BB2940008204BB /* FakeDataConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeDataConstants.h; sourceTree = "<group>"; };
+		DF99479B18BB40B1008204BB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 		DF99473618BA8207008204BB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DF99479B18BB40B1008204BB /* README.md */,
 				DF99474418BA8207008204BB /* Main_iPad.storyboard */,
 				DF99473E18BA8207008204BB /* AppDelegate.h */,
 				DF99473F18BA8207008204BB /* AppDelegate.m */,
@@ -279,6 +282,7 @@
 			files = (
 				DF99474618BA8207008204BB /* Main_iPad.storyboard in Resources */,
 				DF99474B18BA8207008204BB /* Images.xcassets in Resources */,
+				DF99479C18BB40B1008204BB /* README.md in Resources */,
 				DF99474318BA8207008204BB /* Main_iPhone.storyboard in Resources */,
 				DF99473A18BA8207008204BB /* InfoPlist.strings in Resources */,
 			);

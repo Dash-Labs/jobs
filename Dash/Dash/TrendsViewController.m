@@ -44,6 +44,8 @@
     [self updateTotalsView];
 }
 
+
+// TODO -- break totalsview updating out into separate delegate
 -(void)updateTotalsView{
     [self.totalsView setIconImage:[UIImage imageNamed:[self imageNameForDataType:[self.trendControl selectedSegmentIndex]]]];
     [self.totalsView setTotalLabelText:[self totalLabelTextForDataType:[self.trendControl selectedSegmentIndex] andTimeDenomination:[self.timeControl selectedSegmentIndex]]];
@@ -147,7 +149,7 @@
 #pragma instantiation
 
 -(NSArray *)data{
-    // TODO -- add, you know, real data
+    // TODO -- add real data
 
     if (!_data) {
         NSMutableArray *mutableData = [[NSMutableArray alloc]init];

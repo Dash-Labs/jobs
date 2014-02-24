@@ -27,5 +27,5 @@
 
 #pragma GraphContainerView
 
-#define BAR_CHART_V_INSET 30.0
+#define BAR_CHART_V_INSET 40.0
 #define BAR_CHART_H_INSET 30.0
