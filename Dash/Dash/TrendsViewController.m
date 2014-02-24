@@ -12,9 +12,10 @@
 #import <JBBarChartView.h>
 #import "Typedefs.h"
 #import "FontConstants.h"
+#import "FakeDataConstants.h"
 
-@interface TrendsViewController ()<JBBarChartViewDelegate, JBBarChartViewDataSource>
-@property(strong, nonatomic) NSDictionary *data;
+@interface TrendsViewController ()
+@property(strong, nonatomic) NSArray *data;
 @end
 
 @implementation TrendsViewController
@@ -28,6 +29,7 @@
     [self.navigationItem setTitleView:navBarView];
     self.graphView.delegate = self;
     self.graphView.dataSource = self;
+    [self.graphView reloadData];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -46,7 +48,8 @@
     [self.totalsView setIconImage:[UIImage imageNamed:[self imageNameForDataType:[self.trendControl selectedSegmentIndex]]]];
     [self.totalsView setTotalLabelText:[self totalLabelTextForDataType:[self.trendControl selectedSegmentIndex] andTimeDenomination:[self.timeControl selectedSegmentIndex]]];
     [self.totalsView setDigitLabelText:[self calculateTotalForDataType:[self.trendControl selectedSegmentIndex]andTimeDenomination:[self.timeControl selectedSegmentIndex]]];
-//    [self.totalsView drawDivider];
+    [self.totalsView setChangeLabelText:[self changeLabelTextForDataType:[self.trendControl selectedSegmentIndex] andTimeDenomination:[self.timeControl selectedSegmentIndex]]];
+    [self.totalsView setChangeDigitLabelText:[self calculateChangeForDataType:[self.trendControl selectedSegmentIndex] andTimeDenomination:[self.timeControl selectedSegmentIndex]]];
 }
 
 -(NSString *)calculateTotalForDataType:(NSInteger)dataType andTimeDenomination:(NSInteger)td{
@@ -54,9 +57,14 @@
     return @"$123";
 }
 
+-(NSString *)changeLabelTextForDataType:(NSInteger)dataType andTimeDenomination:(NSInteger)td{
+    // TODO -- possibly modify wrt different types of data
+    return [NSString stringWithFormat:@"Change since last %@", [self stringForTD:td]];
+}
+
 -(NSString *)calculateChangeForDataType:(NSInteger)dataType andTimeDenomination:(NSInteger)td{
     // TODO -- calculate with actual data
-    return [NSString stringWithFormat:@"%C42", DOWN_ARROW_GLYPH];
+    return [NSString stringWithFormat:@"%C$42", DOWN_ARROW_GLYPH];
 }
 
 -(NSString *)stringForTD:(NSInteger)timeDenomination{
@@ -119,15 +127,15 @@
 #pragma JBBarChartViewDelegate
 
 - (CGFloat)barChartView:(JBBarChartView *)barChartView heightForBarViewAtAtIndex:(NSInteger)index{
-    CGFloat barHeight = 10;
-    return barHeight;
+    return [self.data[index] floatValue];
 }
 
 #pragma JBBarChartViewDataSource
 
 - (NSInteger)numberOfBarsInBarChartView:(JBBarChartView *)barChartView{
-    return 10;
+    return [self.data count];
 }
+
 
 - (UIView *)barViewForBarChartView:(JBBarChartView *)barChartView atIndex:(NSInteger)index{
     UIView *barView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 50, 50)];
@@ -135,15 +143,18 @@
     return barView;
 }
 
+
 #pragma instantiation
 
--(NSDictionary *)data{
+-(NSArray *)data{
+    // TODO -- add, you know, real data
+
     if (!_data) {
-        NSMutableDictionary *temp = [[NSMutableDictionary alloc]init];
-        for (int i = 0; i < 365; i++) {
-            temp[@(i)] = @{@"score": @(arc4random() % 100), @"mpg": @(arc4random() % 100), @"fuel": @(arc4random() % 100), @"distance": @(arc4random() % 100)};
-            _data = [NSDictionary dictionaryWithDictionary:temp];
+        NSMutableArray *mutableData = [[NSMutableArray alloc]init];
+        for (int i = 0; i < FAKE_DATA_LENGTH; i++) {
+            [mutableData addObject:@(arc4random() % FAKE_DATA_CEILING)];
         }
+        _data = [[NSArray alloc]initWithArray:mutableData];
     }
     return _data;
 }

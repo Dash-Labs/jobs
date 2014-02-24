@@ -7,6 +7,7 @@
 //
 
 #import "GraphContainerView.h"
+#import "GeometryConstants.h"
 
 @implementation GraphContainerView
 
@@ -23,18 +24,43 @@
     [self setup];
 }
 
+
 -(void)setup{
     [self addSubview:self.barChartView];
-    self.barChartView.dataSource = self.dataSource;
-    self.barChartView.delegate = self.delegate;
+    [self.barChartView setFrame:self.frame];
+    [self.barChartView setBounds:self.frame];
 }
 
 -(JBBarChartView *)barChartView{
     if (!_barChartView) {
         // TODO -- add subviews for axes, reduce frame size to account
-        _barChartView = [[JBBarChartView alloc]initWithFrame:self.frame];
+        _barChartView = [[JBBarChartView alloc]initWithFrame:CGRectZero];
     }
     return _barChartView;
+}
+
+-(void)reloadData{
+    [self.barChartView setFrame:[self calculateGraphFrame]];
+    [self.barChartView reloadData];
+}
+
+-(CGRect)calculateGraphFrame{
+    CGRect newFrame = self.frame;
+    newFrame.origin.x += BAR_CHART_H_INSET;
+    newFrame.size.width -= 2 * BAR_CHART_H_INSET;
+    newFrame.origin.y += BAR_CHART_V_INSET;
+    newFrame.size.height -= 2 * BAR_CHART_V_INSET;
+    return newFrame;
+}
+
+-(void)setDelegate:(id<JBBarChartViewDelegate>)delegate{
+    _delegate = delegate;
+    self.barChartView.delegate = delegate;
+}
+
+-(void)setDataSource:(id<JBBarChartViewDataSource>)dataSource{
+    _dataSource = dataSource;
+    self.barChartView.dataSource = dataSource;
 }
 
 @end

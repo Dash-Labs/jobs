@@ -24,3 +24,8 @@
 #define ICON_IMAGE_HEIGHT 50.0
 #define ICON_IMAGE_WIDTH 50.0
 #define CHANGE_LABEL_H_INSET 10.0
+
+#pragma GraphContainerView
+
+#define BAR_CHART_V_INSET 30.0
+#define BAR_CHART_H_INSET 30.0

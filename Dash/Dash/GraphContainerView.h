@@ -13,4 +13,5 @@
 @property (strong, nonatomic)JBBarChartView *barChartView;
 @property (strong, nonatomic)id<JBBarChartViewDataSource> dataSource;
 @property (strong, nonatomic)id<JBBarChartViewDelegate> delegate;
+-(void)reloadData;
 @end

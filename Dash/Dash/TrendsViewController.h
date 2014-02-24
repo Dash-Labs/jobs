@@ -11,7 +11,7 @@
 #import "TotalsView.h"
 
 
-@interface TrendsViewController : UIViewController
+@interface TrendsViewController : UIViewController<JBBarChartViewDelegate, JBBarChartViewDataSource>
 @property (weak, nonatomic) IBOutlet TotalsView *totalsView;
 @property (weak, nonatomic) IBOutlet GraphContainerView *graphView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *trendControl;

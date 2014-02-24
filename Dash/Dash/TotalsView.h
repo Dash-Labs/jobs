@@ -14,5 +14,6 @@
 -(void)setIconImage:(UIImage *)image;
 -(void)setDigitLabelText:(NSString *)text;
 -(void)setTotalLabelText:(NSString *)text;
--(void)drawDivider;
+-(void)setChangeLabelText:(NSString *)text;
+-(void)setChangeDigitLabelText:(NSString *)text;
 @end
