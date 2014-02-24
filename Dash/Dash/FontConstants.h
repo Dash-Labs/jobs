@@ -9,3 +9,4 @@
 #define NAV_BAR_HEAD_SIZE 12.0
 #define NAV_BAR_SUBHEAD_SIZE 9.0
 #define BODY_TEXT_SIZE 9.0
+#define DOWN_ARROW_GLYPH (unichar)0x25BC

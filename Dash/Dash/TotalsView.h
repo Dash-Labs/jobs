@@ -11,4 +11,8 @@
 @interface TotalsView : UIView
 @property (nonatomic) NSInteger totalDataType;
 @property (nonatomic) NSInteger timeDenomination;
+-(void)setIconImage:(UIImage *)image;
+-(void)setDigitLabelText:(NSString *)text;
+-(void)setTotalLabelText:(NSString *)text;
+-(void)drawDivider;
 @end

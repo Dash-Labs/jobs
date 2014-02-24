@@ -10,10 +10,11 @@
 #import "ColorConstants.h"
 #import "TrendsNavBarView.h"
 #import <JBBarChartView.h>
+#import "Typedefs.h"
+#import "FontConstants.h"
 
 @interface TrendsViewController ()<JBBarChartViewDelegate, JBBarChartViewDataSource>
 @property(strong, nonatomic) NSDictionary *data;
-@property(strong, nonatomic) NSCalendar *calendar;
 @end
 
 @implementation TrendsViewController
@@ -28,38 +29,92 @@
     self.graphView.delegate = self;
     self.graphView.dataSource = self;
 }
+
+-(void)viewWillAppear:(BOOL)animated{
+    [self updateTotalsView];
+}
+
 - (IBAction)trendControlChanged:(id)sender {
-    [self updateTotalsViewWithSegmentIndex:[sender selectedSegmentIndex]];
+    [self updateTotalsView];
 }
+
 - (IBAction)timeControlChanged:(id)sender {
-    [self updateGraphViewWithSegmentIndex:[sender selectedSegmentIndex]];
+    [self updateTotalsView];
 }
 
--(void)updateTotalsViewWithSegmentIndex:(NSInteger)index{
-    // TODO
+-(void)updateTotalsView{
+    [self.totalsView setIconImage:[UIImage imageNamed:[self imageNameForDataType:[self.trendControl selectedSegmentIndex]]]];
+    [self.totalsView setTotalLabelText:[self totalLabelTextForDataType:[self.trendControl selectedSegmentIndex] andTimeDenomination:[self.timeControl selectedSegmentIndex]]];
+    [self.totalsView setDigitLabelText:[self calculateTotalForDataType:[self.trendControl selectedSegmentIndex]andTimeDenomination:[self.timeControl selectedSegmentIndex]]];
+//    [self.totalsView drawDivider];
 }
 
--(void)updateGraphViewWithSegmentIndex:(NSInteger)index{
-    // TODO
+-(NSString *)calculateTotalForDataType:(NSInteger)dataType andTimeDenomination:(NSInteger)td{
+    // TODO -- calculate with actual data
+    return @"$123";
 }
 
--(NSCalendar *)calendar{
-    if (!_calendar) {
-        _calendar = [[NSCalendar alloc]init];
+-(NSString *)calculateChangeForDataType:(NSInteger)dataType andTimeDenomination:(NSInteger)td{
+    // TODO -- calculate with actual data
+    return [NSString stringWithFormat:@"%C42", DOWN_ARROW_GLYPH];
+}
+
+-(NSString *)stringForTD:(NSInteger)timeDenomination{
+    switch (timeDenomination) {
+        case TimeDenominationMonth:
+            return @"month";
+            break;
+        case TimeDenominationWeek:
+            return @"week";
+            break;
+        case TimeDenominationYear:
+            return @"year";
+            break;
+        default:
+            break;
     }
-    return _calendar;
+    return nil;
 }
 
--(NSDictionary *)data{
-    if (!_data) {
-        NSMutableDictionary *temp = [[NSMutableDictionary alloc]init];
-        for (int i = 0; i < 365; i++) {
-            temp[@(i)] = @{@"score": @(arc4random() % 100), @"mpg": @(arc4random() % 100), @"fuel": @(arc4random() % 100), @"distance": @(arc4random() % 100)};
-            _data = [NSDictionary dictionaryWithDictionary:temp];
-        }
+-(NSString *)totalLabelTextForDataType:(NSInteger)dataType andTimeDenomination:(NSInteger)timeDenomination{
+    switch (dataType) {
+        case DataTypeScore:
+            return [NSString stringWithFormat:@"Total score this %@", [self stringForTD:timeDenomination]];
+            break;
+        case DataTypeDistance:
+            return [NSString stringWithFormat:@"Total distance this %@", [self stringForTD:timeDenomination]];
+            break;
+        case DataTypeFuel:
+            return [NSString stringWithFormat:@"Total amount spent this %@", [self stringForTD:timeDenomination]];
+        case DataTypeEfficiency:
+            return [NSString stringWithFormat:@"Total fuel efficiency this %@", [self stringForTD:timeDenomination]];
+        default:
+            break;
     }
-   return _data;
+    return nil;
 }
+
+-(NSString *)imageNameForDataType:(NSInteger)dataType{
+    // TODO -- Add other images
+    switch (dataType) {
+        case DataTypeScore:
+            return @"GasCan";
+            break;
+        case DataTypeDistance:
+            return @"GasCan";
+            break;
+        case DataTypeEfficiency:
+            return @"GasCan";
+            break;
+        case DataTypeFuel:
+            return @"GasCan";
+            break;
+        default:
+            break;
+    }
+    return nil;
+}
+
 
 #pragma JBBarChartViewDelegate
 
@@ -78,6 +133,19 @@
     UIView *barView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 50, 50)];
     [barView setBackgroundColor:NAVIGATION_BAR_COLOR];
     return barView;
+}
+
+#pragma instantiation
+
+-(NSDictionary *)data{
+    if (!_data) {
+        NSMutableDictionary *temp = [[NSMutableDictionary alloc]init];
+        for (int i = 0; i < 365; i++) {
+            temp[@(i)] = @{@"score": @(arc4random() % 100), @"mpg": @(arc4random() % 100), @"fuel": @(arc4random() % 100), @"distance": @(arc4random() % 100)};
+            _data = [NSDictionary dictionaryWithDictionary:temp];
+        }
+    }
+    return _data;
 }
 
 

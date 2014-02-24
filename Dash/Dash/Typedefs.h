@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Jeffrey Blagdon. All rights reserved.
 //
 
+#pragma TrendsViewController
+
 typedef NS_ENUM(NSInteger, DataType) {
     DataTypeScore,
     DataTypeEfficiency,
